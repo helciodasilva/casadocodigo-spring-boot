@@ -30,13 +30,13 @@ public class RepositoryTest implements ApplicationRunner{
 	private ClienteRepository clienteRepository;
 
 	public void run(ApplicationArguments applicatoinArguments) throws Exception {
-		System.out.println(">>>	Iniciando	carga	de	dados...");
-		Cliente fernando = new Cliente(ID_CLIENTE_FERNANDO, "Fernando	Boaglio", "Sampa");
-		Cliente zePequeno = new Cliente(ID_CLIENTE_ZE_PEQUENO, "Zé	Pequeno", "Cidade	de	Deus");
+		System.out.println(">>> Iniciando carga de dados...");
+		Cliente fernando = new Cliente(ID_CLIENTE_FERNANDO, "Fernando Boaglio", "Sampa");
+		Cliente zePequeno = new Cliente(ID_CLIENTE_ZE_PEQUENO, "Zé	Pequeno", "Cidade de Deus");
 
-		Item dog1 = new Item(ID_ITEM1, "Green	Dog	tradicional", 25d);
-		Item dog2 = new Item(ID_ITEM2, "Green	Dog	tradicional	picante", 27d);
-		Item dog3 = new Item(ID_ITEM3, "Green	Dog	max	salada", 30d);
+		Item dog1 = new Item(ID_ITEM1, "Green Dog tradicional", 25d);
+		Item dog2 = new Item(ID_ITEM2, "Green Dog tradicional picante", 27d);
+		Item dog3 = new Item(ID_ITEM3, "Green Dog max salada", 30d);
 
 		List<Item> listaPedidoFernando1 = new ArrayList<Item>();
 		listaPedidoFernando1.add(dog1);
@@ -63,8 +63,8 @@ public class RepositoryTest implements ApplicationRunner{
 		Pedido pedido2DoFernando = new Pedido(ID_PEDIDO3, fernando, listaPedidoFernando2, dog2.getPreco());
 		fernando.novoPedido(pedido2DoFernando);
 		clienteRepository.saveAndFlush(fernando);
-		System.out.println(">>>	Pedido 2 - Fernando:" + pedido2DoFernando);
-		System.out.println(">>>	Gravado cliente 1: " + fernando);
+		System.out.println(">>> Pedido 2 - Fernando:" + pedido2DoFernando);
+		System.out.println(">>> Gravado cliente 1: " + fernando);
 
 	}
 
