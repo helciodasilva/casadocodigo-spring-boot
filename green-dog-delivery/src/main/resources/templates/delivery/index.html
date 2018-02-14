@@ -92,7 +92,14 @@
 			  Chamada do serviço: <strong>{{urlPedido}}</strong> 
 			</div>
 	        <fieldset>{{message}}</fieldset>
-	       
+	        <div class="alert alert-danger" ng-show="oferta!=null">
+	         <img th:src="@{/img/oferta.png}"/>{{oferta}}
+	          <div  ng-show="debug==1">
+	           <br/> 
+	           <img th:src="@{/img/servidor.png}"/>
+	           <strong>{{servidor}}</strong>
+	          </div>
+	        </div>
 		</div>
 	</div>
 </body>
